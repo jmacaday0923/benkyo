@@ -4,7 +4,12 @@
     "description": "Study JLPT vocabulary and kanji with spaced repetition."
   },
   "HomePage": {
+    "eyebrow": "JLPT study app",
     "title": "Benkyo",
-    "tagline": "Study JLPT vocabulary and kanji with spaced repetition."
+    "tagline": "Study JLPT vocabulary and kanji with spaced repetition.",
+    "deckCountLabel": "Decks in the database"
+  },
+  "LocaleSwitcher": {
+    "label": "Language"
   }
 }

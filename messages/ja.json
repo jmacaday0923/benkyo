@@ -4,7 +4,12 @@
     "description": "間隔反復でJLPTの単語と漢字を学習しましょう。"
   },
   "HomePage": {
+    "eyebrow": "JLPT学習アプリ",
     "title": "Benkyo",
-    "tagline": "間隔反復でJLPTの単語と漢字を学習しましょう。"
+    "tagline": "間隔反復でJLPTの単語と漢字を学習しましょう。",
+    "deckCountLabel": "データベース内のデッキ数"
+  },
+  "LocaleSwitcher": {
+    "label": "言語"
   }
 }
