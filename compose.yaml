@@ -1,0 +1,24 @@
+name: benkyo
+
+services:
+  db:
+    image: postgres:18-alpine
+    shm_size: 128mb
+    environment:
+      POSTGRES_USER: benkyo
+      POSTGRES_PASSWORD: benkyo
+      POSTGRES_DB: benkyo
+    ports:
+      # Bound to localhost only, so the database isn't reachable from the network.
+      - "127.0.0.1:${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      # Postgres 18+ images keep their data under /var/lib/postgresql.
+      - postgres-data:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U benkyo -d benkyo"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  postgres-data:
